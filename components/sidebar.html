@@ -1,0 +1,99 @@
+<!-- Sidebar Component -->
+<aside class="fixed left-0 top-0 h-full w-[270px] bg-sidebar z-50 flex flex-col transition-all duration-300 lg:translate-x-0">
+    <div class="flex items-center gap-3 px-6 h-[72px] border-b border-sidebar-border flex-shrink-0">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20 flex-shrink-0">
+            <i class="fa-solid fa-fire text-white"></i>
+        </div>
+        <div class="sidebar-text">
+            <h1 class="text-white font-bold text-lg leading-tight">ForgeAdmin</h1>
+            <p class="text-brand-400 text-[11px] font-medium">BackForge Store</p>
+        </div>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1 custom-scrollbar">
+        <p class="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Main Menu</p>
+        
+        <!-- DASHBOARD -->
+        <a href="dashboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-layer-group w-5 text-center"></i>
+            <span class="sidebar-text">Dashboard</span>
+        </a>
+
+        <!-- ANALYTICS -->
+        <a href="analytics.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-chart-line w-5 text-center"></i>
+            <span class="sidebar-text">Analytics</span>
+        </a>
+
+        <!-- PRODUCTS -->
+        <a href="products.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-box w-5 text-center"></i>
+            <span class="sidebar-text">Products</span>
+            <span class="sidebar-text ml-auto bg-brand-500/20 text-brand-400 text-[11px] font-semibold px-2 py-0.5 rounded-full">24</span>
+        </a>
+
+        <!-- CATEGORIES -->
+        <a href="categories.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-tags w-5 text-center"></i>
+            <span class="sidebar-text">Categories</span>
+        </a>
+
+        <!-- INVENTORY -->
+        <a href="inventory.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-warehouse w-5 text-center"></i>
+            <span class="sidebar-text">Inventory</span>
+        </a>
+
+        <!-- ORDERS -->
+        <a href="orders.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-bag-shopping w-5 text-center"></i>
+            <span class="sidebar-text">Orders</span>
+            <span class="sidebar-text ml-auto w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        </a>
+
+        <!-- CUSTOMERS -->
+        <a href="customers.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-users w-5 text-center"></i>
+            <span class="sidebar-text">Customers</span>
+        </a>
+
+        <!-- REVIEWS -->
+        <a href="reviews.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-star w-5 text-center"></i>
+            <span class="sidebar-text">Reviews</span>
+        </a>
+
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Marketing</p>
+        
+        <!-- PROMOTIONS -->
+        <a href="promotions.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-ticket w-5 text-center"></i>
+            <span class="sidebar-text">Promotions</span>
+        </a>
+
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">System</p>
+        
+        <!-- STAFF -->
+        <a href="staff.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-user-shield w-5 text-center"></i>
+            <span class="sidebar-text">Staff</span>
+        </a>
+
+        <!-- SETTINGS -->
+        <a href="settings.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-gear w-5 text-center"></i>
+            <span class="sidebar-text">Settings</span>
+        </a>
+    </nav>
+    <div class="border-t border-sidebar-border p-4 flex-shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">JD</div>
+            <div class="sidebar-text min-w-0">
+                <p class="text-white text-sm font-semibold truncate">John Doe</p>
+                <p class="text-gray-500 text-xs truncate">admin@forgecart.com</p>
+            </div>
+            <a href="../index.html" class="sidebar-text ml-auto text-gray-500 hover:text-red-400 transition-colors" title="Logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </div>
+</aside>

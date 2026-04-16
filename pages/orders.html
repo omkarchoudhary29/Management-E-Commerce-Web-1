@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeAdmin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' },
+                        sidebar: { DEFAULT:'#0b1120',light:'#131b2e',hover:'#1a2540',border:'#1e2d4a' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <aside class="fixed left-0 top-0 h-full w-[270px] bg-sidebar z-50 flex flex-col transition-all duration-300 lg:translate-x-0 hidden lg:flex">
+    <div class="flex items-center gap-3 px-6 h-[72px] border-b border-sidebar-border flex-shrink-0">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20 flex-shrink-0">
+            <i class="fa-solid fa-fire text-white"></i>
+        </div>
+        <div class="sidebar-text">
+            <h1 class="text-white font-bold text-lg leading-tight">ForgeAdmin</h1>
+            <p class="text-brand-400 text-[11px] font-medium">BackForge Store</p>
+        </div>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1 custom-scrollbar">
+        <p class="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Main Menu</p>
+        
+        <!-- DASHBOARD -->
+        <a href="dashboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-layer-group w-5 text-center"></i>
+            <span class="sidebar-text">Dashboard</span>
+        </a>
+
+        <!-- ANALYTICS -->
+        <a href="analytics.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-chart-line w-5 text-center"></i>
+            <span class="sidebar-text">Analytics</span>
+        </a>
+
+        <!-- PRODUCTS -->
+        <a href="products.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-box w-5 text-center"></i>
+            <span class="sidebar-text">Products</span>
+            <span class="sidebar-text ml-auto bg-brand-500/20 text-brand-400 text-[11px] font-semibold px-2 py-0.5 rounded-full">24</span>
+        </a>
+
+        <!-- CATEGORIES -->
+        <a href="categories.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-tags w-5 text-center"></i>
+            <span class="sidebar-text">Categories</span>
+        </a>
+
+        <!-- INVENTORY -->
+        <a href="inventory.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-warehouse w-5 text-center"></i>
+            <span class="sidebar-text">Inventory</span>
+        </a>
+
+        <!-- ORDERS -->
+        <a href="orders.html" class="nav-item active w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all bg-brand-500/10 text-brand-400">
+            <i class="fa-solid fa-bag-shopping w-5 text-center"></i>
+            <span class="sidebar-text">Orders</span>
+            <span class="sidebar-text ml-auto w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        </a>
+
+        <!-- CUSTOMERS -->
+        <a href="customers.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-users w-5 text-center"></i>
+            <span class="sidebar-text">Customers</span>
+        </a>
+
+        <!-- REVIEWS -->
+        <a href="reviews.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-star w-5 text-center"></i>
+            <span class="sidebar-text">Reviews</span>
+        </a>
+
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Marketing</p>
+        
+        <!-- PROMOTIONS -->
+        <a href="promotions.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-ticket w-5 text-center"></i>
+            <span class="sidebar-text">Promotions</span>
+        </a>
+
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">System</p>
+        
+        <!-- STAFF -->
+        <a href="staff.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-user-shield w-5 text-center"></i>
+            <span class="sidebar-text">Staff</span>
+        </a>
+
+        <!-- SETTINGS -->
+        <a href="settings.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-gear w-5 text-center"></i>
+            <span class="sidebar-text">Settings</span>
+        </a>
+    </nav>
+    <div class="border-t border-sidebar-border p-4 flex-shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">JD</div>
+            <div class="sidebar-text min-w-0">
+                <p class="text-white text-sm font-semibold truncate">John Doe</p>
+                <p class="text-gray-500 text-xs truncate">admin@forgecart.com</p>
+            </div>
+            <a href="../index.html" class="sidebar-text ml-auto text-gray-500 hover:text-red-400 transition-colors" title="Logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </div>
+</aside>
+    <main class="flex-1 lg:ml-[270px] min-h-screen transition-all duration-300 flex flex-col">
+        <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+    <div class="flex items-center justify-between h-[72px] px-4 sm:px-6">
+        <div class="flex items-center gap-3">
+            <button class="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+            <div class="hidden sm:flex items-center">
+                <input type="text" placeholder="Search anything..." class="forge-search">
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="relative p-2.5 hover:bg-gray-100 rounded-xl transition-colors">
+                <i class="fa-regular fa-bell text-gray-500 text-lg"></i>
+                <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <div class="w-px h-8 bg-gray-200 mx-1 hidden sm:block"></div>
+            <button class="flex items-center gap-2.5 pl-2 pr-3 py-1.5 hover:bg-gray-100 rounded-xl transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-xs">JD</div>
+                <div class="hidden sm:block text-left">
+                    <p class="text-sm font-semibold text-gray-800 leading-tight">John Doe</p>
+                    <p class="text-[11px] text-gray-400">Administrator</p>
+                </div>
+                <i class="fa-solid fa-chevron-down text-gray-400 text-xs hidden sm:block"></i>
+            </button>
+        </div>
+    </div>
+</header>
+        <div class="p-4 sm:p-6 lg:p-8 flex-1">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
+    <div>
+        <h2 class="text-2xl font-bold text-gray-900">Orders</h2>
+        <p class="text-gray-500 mt-1">Review and manage customer transactions.</p>
+    </div>
+    <div class="mt-4 sm:mt-0 flex gap-3">
+        <button class="px-4 py-2 border border-gray-200 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-50 transition-colors shadow-sm">
+            <i class="fa-solid fa-download mr-1.5"></i> Export
+        </button>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-clock-rotate-left text-blue-500 text-xl"></i>
+        </div>
+        <div>
+            <p class="text-gray-500 text-sm">Pending Orders</p>
+            <p class="text-2xl font-bold text-gray-900">14</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-box-open text-amber-500 text-xl"></i>
+        </div>
+        <div>
+            <p class="text-gray-500 text-sm">Processing</p>
+            <p class="text-2xl font-bold text-gray-900">32</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex items-center gap-4">
+        <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-xl"></i>
+        </div>
+        <div>
+            <p class="text-gray-500 text-sm">Completed This Week</p>
+            <p class="text-2xl font-bold text-gray-900">128</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+    <div class="p-4 sm:p-5 border-b border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex gap-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
+            <button class="px-4 py-1.5 bg-gray-900 text-white rounded-lg text-sm font-medium whitespace-nowrap">All Orders</button>
+            <button class="px-4 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 whitespace-nowrap">Pending</button>
+            <button class="px-4 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 whitespace-nowrap">Completed</button>
+            <button class="px-4 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 whitespace-nowrap">Refunded</button>
+        </div>
+        <div class="w-full max-w-[250px]">
+            <input type="text" placeholder="Search order ID..." class="forge-input" style="padding: 0.5rem 1rem;">
+        </div>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+            <thead>
+                <tr class="bg-gray-50/50 text-gray-500 text-sm border-b border-gray-100">
+                    <th class="px-6 py-4 font-medium">Order ID</th>
+                    <th class="px-6 py-4 font-medium">Date</th>
+                    <th class="px-6 py-4 font-medium">Customer</th>
+                    <th class="px-6 py-4 font-medium">Status</th>
+                    <th class="px-6 py-4 font-medium">Total</th>
+                    <th class="px-6 py-4 font-medium text-right">Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-sm">
+                <tr class="border-b border-gray-50 hover:bg-gray-50/50 transition-colors">
+                    <td class="px-6 py-4 font-medium text-brand-600">#ORD-9932</td>
+                    <td class="px-6 py-4 text-gray-500">Oct 24, 2025 · 14:32</td>
+                    <td class="px-6 py-4">
+                        <div>
+                            <p class="font-medium text-gray-900">Sarah Jenkins</p>
+                            <p class="text-xs text-gray-500">sarah@example.com</p>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100">
+                            Processing
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$249.00</td>
+                    <td class="px-6 py-4 text-right">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium text-sm">View details</button>
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-50 hover:bg-gray-50/50 transition-colors">
+                    <td class="px-6 py-4 font-medium text-brand-600">#ORD-9931</td>
+                    <td class="px-6 py-4 text-gray-500">Oct 24, 2025 · 11:15</td>
+                    <td class="px-6 py-4">
+                        <div>
+                            <p class="font-medium text-gray-900">Marcus Wright</p>
+                            <p class="text-xs text-gray-500">m.wright@example.com</p>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600 border border-emerald-100">
+                            Completed
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$1,499.00</td>
+                    <td class="px-6 py-4 text-right">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium text-sm">View details</button>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50/50 transition-colors">
+                    <td class="px-6 py-4 font-medium text-brand-600">#ORD-9930</td>
+                    <td class="px-6 py-4 text-gray-500">Oct 23, 2025 · 09:45</td>
+                    <td class="px-6 py-4">
+                        <div>
+                            <p class="font-medium text-gray-900">Elena Gomez</p>
+                            <p class="text-xs text-gray-500">elena.g@example.com</p>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-red-50 text-red-600 border border-red-100">
+                            Refunded
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">$45.00</td>
+                    <td class="px-6 py-4 text-right">
+                        <button class="text-brand-600 hover:text-brand-700 font-medium text-sm">View details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        </div>
+    </main>
+</body>
+</html>

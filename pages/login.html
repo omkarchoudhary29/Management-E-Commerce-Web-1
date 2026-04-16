@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeAdmin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' },
+                        sidebar: { DEFAULT:'#0b1120',light:'#131b2e',hover:'#1a2540',border:'#1e2d4a' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-800">
+    <!-- ==================== LOGIN PAGE ==================== -->
+    <div class="fixed inset-0 z-[100] flex">
+        <!-- Left Panel - Branding -->
+        <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-sidebar flex-col items-center justify-center p-12">
+            <div class="absolute inset-0 opacity-10">
+                <div class="forge-grid"></div>
+            </div>
+            <div class="relative z-10 text-center max-w-md">
+                <div class="flex items-center justify-center gap-3 mb-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-brand-400 to-brand-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-fire text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-white">ForgeAdmin</h1>
+                        <p class="text-brand-400 text-sm font-medium">BackForge Store</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">Powerful admin dashboard for your e-commerce empire. Manage products, orders, and customers with ease.</p>
+            </div>
+            <div class="absolute bottom-8 left-0 right-0 text-center text-gray-600 text-xs">© 2025 ForgeCart — BackForge Inc. All rights reserved.</div>
+        </div>
+        <!-- Right Panel - Form -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-white">
+            <div class="w-full max-w-md">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Welcome back</h2>
+                <p class="text-gray-500 mb-8">Sign in to your admin dashboard</p>
+                <form class="space-y-5" action="dashboard.html">
+                    <div>
+                        <label class="forge-label">Email Address</label>
+                        <input type="text" value="admin@forgecart.com" class="forge-input" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="forge-label">Password</label>
+                        <input type="text" value="password123" class="forge-input" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="forge-btn-primary">
+                        Sign In
+                    </button>
+                    
+                    <p class="mt-8 text-center text-sm text-gray-600">
+                        Don't have an account? 
+                        <a href="signup.html" class="text-brand-600 font-bold hover:underline">Create an account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

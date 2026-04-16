@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeAdmin | Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' },
+                        sidebar: { DEFAULT:'#0b1120',light:'#131b2e',hover:'#1a2540',border:'#1e2d4a' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <aside class="fixed left-0 top-0 h-full w-[270px] bg-sidebar z-50 flex flex-col transition-all duration-300 lg:translate-x-0 hidden lg:flex">
+    <div class="flex items-center gap-3 px-6 h-[72px] border-b border-sidebar-border flex-shrink-0">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20 flex-shrink-0">
+            <i class="fa-solid fa-fire text-white"></i>
+        </div>
+        <div class="sidebar-text">
+            <h1 class="text-white font-bold text-lg leading-tight">ForgeAdmin</h1>
+            <p class="text-brand-400 text-[11px] font-medium">BackForge Store</p>
+        </div>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1 custom-scrollbar">
+        <p class="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Main Menu</p>
+        <a href="dashboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-layer-group w-5 text-center"></i>
+            <span class="sidebar-text">Dashboard</span>
+        </a>
+        <a href="analytics.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-chart-line w-5 text-center"></i>
+            <span class="sidebar-text">Analytics</span>
+        </a>
+        <a href="products.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-box w-5 text-center"></i>
+            <span class="sidebar-text">Products</span>
+            <span class="sidebar-text ml-auto bg-brand-500/20 text-brand-400 text-[11px] font-semibold px-2 py-0.5 rounded-full">24</span>
+        </a>
+        <a href="categories.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-tags w-5 text-center"></i>
+            <span class="sidebar-text">Categories</span>
+        </a>
+        <a href="inventory.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-warehouse w-5 text-center"></i>
+            <span class="sidebar-text">Inventory</span>
+        </a>
+        <a href="orders.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-bag-shopping w-5 text-center"></i>
+            <span class="sidebar-text">Orders</span>
+            <span class="sidebar-text ml-auto w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        </a>
+        <a href="customers.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-users w-5 text-center"></i>
+            <span class="sidebar-text">Customers</span>
+        </a>
+        <a href="reviews.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all bg-brand-500/10 text-brand-400">
+            <i class="fa-solid fa-star w-5 text-center"></i>
+            <span class="sidebar-text">Reviews</span>
+        </a>
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Marketing</p>
+        <a href="promotions.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-ticket w-5 text-center"></i>
+            <span class="sidebar-text">Promotions</span>
+        </a>
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">System</p>
+        <a href="staff.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-user-shield w-5 text-center"></i>
+            <span class="sidebar-text">Staff</span>
+        </a>
+        <a href="settings.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-gear w-5 text-center"></i>
+            <span class="sidebar-text">Settings</span>
+        </a>
+    </nav>
+    <div class="border-t border-sidebar-border p-4 flex-shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">JD</div>
+            <div class="sidebar-text min-w-0">
+                <p class="text-white text-sm font-semibold truncate">John Doe</p>
+                <p class="text-gray-500 text-xs truncate">admin@forgecart.com</p>
+            </div>
+            <a href="../index.html" class="sidebar-text ml-auto text-gray-500 hover:text-red-400 transition-colors" title="Logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </div>
+</aside>
+    <main class="flex-1 lg:ml-[270px] min-h-screen transition-all duration-300 flex flex-col">
+        <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+            <div class="flex items-center justify-between h-[72px] px-4 sm:px-6">
+                <div class="flex items-center gap-3">
+                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors">
+                        <i class="fa-solid fa-bars text-gray-600"></i>
+                    </button>
+                    <h2 class="text-lg font-bold text-gray-900">Product Reviews</h2>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-4 sm:p-6 lg:p-8 flex-1">
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Review Item -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">SJ</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sarah Jenkins</h4>
+                                <p class="text-xs text-gray-400">Oct 24, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl mb-4 border border-gray-100">
+                        <p class="text-sm font-bold text-gray-700 mb-1">Product: <span class="text-brand-600">ForgeBook Pro 15"</span></p>
+                        <p class="text-sm text-gray-600">"This laptop is absolutely incredible. The screen is gorgeous and it handles all my development tasks with ease. Highly recommend!"</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="px-4 py-2 bg-emerald-50 text-emerald-600 text-xs font-bold rounded-lg hover:bg-emerald-100 transition-colors">Approve</button>
+                        <button class="px-4 py-2 bg-red-50 text-red-600 text-xs font-bold rounded-lg hover:bg-red-100 transition-colors">Reject</button>
+                    </div>
+                </div>
+
+                <!-- Review Item -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm opacity-75">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-600">RB</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Robert Brown</h4>
+                                <p class="text-xs text-gray-400">Oct 22, 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1 text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl mb-4 border border-gray-100">
+                        <p class="text-sm font-bold text-gray-700 mb-1">Product: <span class="text-brand-600">Noise Cancelling Pods</span></p>
+                        <p class="text-sm text-gray-600">"The sound quality is great but they keep slipping out of my ears while running. Shipping was fast though."</p>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-500 text-xs font-bold rounded-full">Rejected</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

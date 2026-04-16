@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeAdmin | Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' },
+                        sidebar: { DEFAULT:'#0b1120',light:'#131b2e',hover:'#1a2540',border:'#1e2d4a' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <aside class="fixed left-0 top-0 h-full w-[270px] bg-sidebar z-50 flex flex-col transition-all duration-300 lg:translate-x-0 hidden lg:flex">
+    <div class="flex items-center gap-3 px-6 h-[72px] border-b border-sidebar-border flex-shrink-0">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20 flex-shrink-0">
+            <i class="fa-solid fa-fire text-white"></i>
+        </div>
+        <div class="sidebar-text">
+            <h1 class="text-white font-bold text-lg leading-tight">ForgeAdmin</h1>
+            <p class="text-brand-400 text-[11px] font-medium">BackForge Store</p>
+        </div>
+    </div>
+    <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1 custom-scrollbar">
+        <p class="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Main Menu</p>
+        <a href="dashboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-layer-group w-5 text-center"></i>
+            <span class="sidebar-text">Dashboard</span>
+        </a>
+        <a href="analytics.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all bg-brand-500/10 text-brand-400">
+            <i class="fa-solid fa-chart-line w-5 text-center"></i>
+            <span class="sidebar-text">Analytics</span>
+        </a>
+        <a href="products.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-box w-5 text-center"></i>
+            <span class="sidebar-text">Products</span>
+            <span class="sidebar-text ml-auto bg-brand-500/20 text-brand-400 text-[11px] font-semibold px-2 py-0.5 rounded-full">24</span>
+        </a>
+        <a href="categories.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-tags w-5 text-center"></i>
+            <span class="sidebar-text">Categories</span>
+        </a>
+        <a href="inventory.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-warehouse w-5 text-center"></i>
+            <span class="sidebar-text">Inventory</span>
+        </a>
+        <a href="orders.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-bag-shopping w-5 text-center"></i>
+            <span class="sidebar-text">Orders</span>
+            <span class="sidebar-text ml-auto w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+        </a>
+        <a href="customers.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-users w-5 text-center"></i>
+            <span class="sidebar-text">Customers</span>
+        </a>
+        <a href="reviews.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-star w-5 text-center"></i>
+            <span class="sidebar-text">Reviews</span>
+        </a>
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">Marketing</p>
+        <a href="promotions.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-ticket w-5 text-center"></i>
+            <span class="sidebar-text">Promotions</span>
+        </a>
+        <p class="px-3 mt-6 mb-2 text-[11px] font-semibold uppercase tracking-wider text-gray-500 sidebar-text">System</p>
+        <a href="staff.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-user-shield w-5 text-center"></i>
+            <span class="sidebar-text">Staff</span>
+        </a>
+        <a href="settings.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-gray-400 hover:text-white hover:bg-sidebar-hover">
+            <i class="fa-solid fa-gear w-5 text-center"></i>
+            <span class="sidebar-text">Settings</span>
+        </a>
+    </nav>nav>
+    <div class="border-t border-sidebar-border p-4 flex-shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">JD</div>
+            <div class="sidebar-text min-w-0">
+                <p class="text-white text-sm font-semibold truncate">John Doe</p>
+                <p class="text-gray-500 text-xs truncate">admin@forgecart.com</p>
+            </div>
+            <a href="../index.html" class="sidebar-text ml-auto text-gray-500 hover:text-red-400 transition-colors" title="Logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </div>
+</aside>
+    <main class="flex-1 lg:ml-[270px] min-h-screen transition-all duration-300 flex flex-col">
+        <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+            <div class="flex items-center justify-between h-[72px] px-4 sm:px-6">
+                <div class="flex items-center gap-3">
+                    <button class="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors">
+                        <i class="fa-solid fa-bars text-gray-600"></i>
+                    </button>
+                    <div class="hidden sm:flex items-center">
+                        <input type="text" placeholder="Search anything..." class="forge-search">
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="hidden md:flex items-center gap-2 bg-gray-100 p-1 rounded-lg">
+                        <button class="px-3 py-1.5 text-xs font-medium bg-white shadow-sm rounded-md text-gray-900">7 Days</button>
+                        <button class="px-3 py-1.5 text-xs font-medium text-gray-500 hover:text-gray-900">30 Days</button>
+                        <button class="px-3 py-1.5 text-xs font-medium text-gray-500 hover:text-gray-900">Custom</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-4 sm:p-6 lg:p-8 flex-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <p class="text-gray-500 text-sm mb-1">Conversion Rate</p>
+                    <div class="flex items-end justify-between">
+                        <h3 class="text-2xl font-bold text-gray-900">3.48%</h3>
+                        <span class="text-emerald-500 text-xs font-bold mb-1"><i class="fa-solid fa-caret-up mr-1"></i>12%</span>
+                    </div>
+                    <div class="mt-4 h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-brand-500 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <p class="text-gray-500 text-sm mb-1">Average Order Value</p>
+                    <div class="flex items-end justify-between">
+                        <h3 class="text-2xl font-bold text-gray-900">$128.50</h3>
+                        <span class="text-emerald-500 text-xs font-bold mb-1"><i class="fa-solid fa-caret-up mr-1"></i>8%</span>
+                    </div>
+                    <div class="mt-4 h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-blue-500 rounded-full" style="width: 45%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <p class="text-gray-500 text-sm mb-1">Bounce Rate</p>
+                    <div class="flex items-end justify-between">
+                        <h3 class="text-2xl font-bold text-gray-900">42.1%</h3>
+                        <span class="text-red-500 text-xs font-bold mb-1"><i class="fa-solid fa-caret-down mr-1"></i>5%</span>
+                    </div>
+                    <div class="mt-4 h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-red-500 rounded-full" style="width: 42%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <p class="text-gray-500 text-sm mb-1">Sessions</p>
+                    <div class="flex items-end justify-between">
+                        <h3 class="text-2xl font-bold text-gray-900">12,842</h3>
+                        <span class="text-emerald-500 text-xs font-bold mb-1"><i class="fa-solid fa-caret-up mr-1"></i>24%</span>
+                    </div>
+                    <div class="mt-4 h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-emerald-500 rounded-full" style="width: 78%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-6">Traffic Sources</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-medium text-gray-600 w-24">Direct</span>
+                            <div class="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-500 rounded-full" style="width: 65%"></div>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900 w-12 text-right">65%</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-medium text-gray-600 w-24">Social Media</span>
+                            <div class="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900 w-12 text-right">45%</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-medium text-gray-600 w-24">Email</span>
+                            <div class="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-emerald-500 rounded-full" style="width: 32%"></div>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900 w-12 text-right">32%</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-medium text-gray-600 w-24">Referrals</span>
+                            <div class="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-violet-500 rounded-full" style="width: 18%"></div>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900 w-12 text-right">18%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-6">Device Breakdown</h3>
+                    <div class="flex items-center justify-around h-48">
+                        <div class="text-center">
+                            <div class="w-24 h-24 rounded-full border-8 border-brand-500 border-t-transparent flex items-center justify-center mb-2">
+                                <span class="text-lg font-bold">58%</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Mobile</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-24 h-24 rounded-full border-8 border-blue-500 border-t-transparent flex items-center justify-center mb-2">
+                                <span class="text-lg font-bold">32%</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Desktop</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-24 h-24 rounded-full border-8 border-emerald-500 border-t-transparent flex items-center justify-center mb-2">
+                                <span class="text-lg font-bold">10%</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Tablet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
