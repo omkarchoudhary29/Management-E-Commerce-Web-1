@@ -40,6 +40,7 @@ MongoDB (Database)
 * Clean separation of concerns
 
 ---
+<img width="1536" height="1024" alt="ChatGPT Image Apr 17, 2026, 10_02_34 AM" src="https://github.com/user-attachments/assets/0f94e3ab-61e3-4fbe-a1b7-fecaae01dc26" />
 
 ## 🧰 Tech Stack
 
@@ -263,24 +264,7 @@ python3 -m http.server 5500
 
 ---
 
-## ⚠️ Current Limitations
 
-* Frontend still partially static
-* No real-time updates
-* No WebSocket integration
-* Basic role management
-
----
-
-## 🔮 Future Enhancements
-
-* RBAC (Admin / Staff roles)
-* Real-time dashboards (WebSockets)
-* Payment gateway integration
-* AI-based analytics
-* Microservices architecture
-
----
 
 ## 🏆 Hackathon Value
 
