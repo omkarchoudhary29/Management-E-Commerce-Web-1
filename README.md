@@ -244,6 +244,41 @@ Secure authentication using JWT:
 
 ---
 
+## 🚀 Round 2 Enhancements
+
+### 📈 Bulk Product Management
+- Supports rapid product addition  
+- Scalable inventory handling  
+- Optimized admin workflows  
+
+---
+
+### 🔍 Smart Search Functionality
+- Real-time search filtering  
+- Case-insensitive matching  
+- Instant UI updates  
+
+---
+
+### 📂 CSV Import Feature
+- Upload products via CSV  
+- Converts CSV → JSON  
+- Enables bulk inventory onboarding  
+
+---
+
+### 🏭 Supplier & Restock Management (NEW 🔥)
+- Introduced supplier-based product system  
+- Products linked with suppliers  
+- Supports restocking workflow:
+  - Dynamic stock updates  
+  - Product availability tracking  
+  - Price consistency management  
+- Improves inventory control and supply chain tracking  
+
+---
+
+
 ## ▶️ Getting Started
 
 ### 1. Start MongoDB
